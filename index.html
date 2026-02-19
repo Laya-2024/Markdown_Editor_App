@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Markdown Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Markdown Editor</h1>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-icon" title="Toggle Theme">🌙</button>
+                <button id="downloadMd" class="btn" title="Download Markdown">💾 Save MD</button>
+                <button id="downloadHtml" class="btn" title="Download HTML">📄 Save HTML</button>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <button class="tool-btn" data-action="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+            <button class="tool-btn" data-action="italic" title="Italic (Ctrl+I)"><i>I</i></button>
+            <button class="tool-btn" data-action="strikethrough" title="Strikethrough"><s>S</s></button>
+            <span class="divider"></span>
+            <button class="tool-btn" data-action="h1" title="Heading 1">H1</button>
+            <button class="tool-btn" data-action="h2" title="Heading 2">H2</button>
+            <button class="tool-btn" data-action="h3" title="Heading 3">H3</button>
+            <span class="divider"></span>
+            <button class="tool-btn" data-action="link" title="Link">🔗</button>
+            <button class="tool-btn" data-action="image" title="Image">🖼️</button>
+            <button class="tool-btn" data-action="code" title="Code">&lt;/&gt;</button>
+            <button class="tool-btn" data-action="quote" title="Quote">❝</button>
+            <span class="divider"></span>
+            <button class="tool-btn" data-action="ul" title="Unordered List">• List</button>
+            <button class="tool-btn" data-action="ol" title="Ordered List">1. List</button>
+            <button class="tool-btn" data-action="table" title="Table">📊</button>
+            <span class="divider"></span>
+            <button class="tool-btn" data-action="clear" title="Clear All">🗑️</button>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <span>✍️ Editor</span>
+                    <span class="word-count" id="wordCount">0 words</span>
+                </div>
+                <textarea id="editor" placeholder="Start typing your markdown here..."></textarea>
+            </div>
+
+            <div class="preview-panel">
+                <div class="panel-header">
+                    <span>👁️ Preview</span>
+                    <button id="copyHtml" class="btn-small">📋 Copy HTML</button>
+                </div>
+                <div id="preview" class="preview-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
